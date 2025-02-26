@@ -2,6 +2,8 @@
 
 A simple, lightweight, and flexible Lorem Ipsum text generator for Node.js. Generate placeholder text in various formats including words, sentences, paragraphs, and lists.
 
+Visit our website: [www.loremipsums.org](https://www.loremipsums.org)
+
 ## Features
 
 - 🚀 Zero dependencies
@@ -9,28 +11,29 @@ A simple, lightweight, and flexible Lorem Ipsum text generator for Node.js. Gene
 - 🔄 ESM and CommonJS support
 - 🎯 Multiple output formats
 - 💪 TypeScript friendly
+- 🌐 Online generator available at [www.loremipsums.org](https://www.loremipsums.org)
 
 ## Installation
 
 ```bash
 # Using npm
-npm install loremipsum-generator
+npm install @jackhunds/loremipsum-generator
 
 # Using yarn
-yarn add loremipsum-generator
+yarn add @jackhunds/loremipsum-generator
 
 # Using pnpm
-pnpm add loremipsum-generator
+pnpm add @jackhunds/loremipsum-generator
 ```
 
 ## Usage
 
 ```javascript
 // ESM
-import lorem from 'loremipsum-generator';
+import lorem from '@jackhunds/loremipsum-generator';
 
 // CommonJS
-const lorem = require('loremipsum-generator');
+const lorem = require('@jackhunds/loremipsum-generator');
 
 // Basic usage
 const words = lorem.generateWords(5);
@@ -124,4 +127,4 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## License
 
-MIT 
+MIT © 2025 [www.loremipsums.org](https://www.loremipsums.org)

@@ -2,7 +2,7 @@
 
 A simple, lightweight, and flexible Lorem Ipsum text generator for Node.js. Generate placeholder text in various formats including words, sentences, paragraphs, and lists.
 
-Visit our website: [www.loremipsums.org](https://www.loremipsums.org)
+Visit our website: [lorem ipsum generator](https://www.loremipsums.org)
 
 ## Features
 

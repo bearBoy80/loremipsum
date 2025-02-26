@@ -1,5 +1,5 @@
 {
-  "name": "loremipsum-generator",
+  "name": "@jackhunds/loremipsum-generator",
   "version": "1.0.0",
   "description": "A simple Lorem Ipsum text generator",
   "main": "index.js",

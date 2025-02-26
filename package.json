@@ -6,8 +6,14 @@
   "type": "module",
   "packageManager": "pnpm@8.15.4",
   "scripts": {
-    "test": "NODE_OPTIONS=--experimental-vm-modules jest --config jest.config.cjs"
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest --config jest.config.cjs",
+    "prepublishOnly": "npm test",
+    "prepare": "npm test"
   },
+  "files": [
+    "index.js",
+    "README.md"
+  ],
   "keywords": [
     "lorem",
     "ipsum",
@@ -18,7 +24,18 @@
   ],
   "author": "jack hundson",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bearboy/loremipsum.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bearboy80/loremipsum/issues"
+  },
+  "homepage": "https://github.com/bearboy80/loremipsum#readme",
   "devDependencies": {
     "jest": "^29.7.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
   }
 }

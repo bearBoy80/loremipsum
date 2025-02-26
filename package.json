@@ -1,0 +1,24 @@
+{
+  "name": "loremipsum-generator",
+  "version": "1.0.0",
+  "description": "A simple Lorem Ipsum text generator",
+  "main": "index.js",
+  "type": "module",
+  "packageManager": "pnpm@8.15.4",
+  "scripts": {
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest --config jest.config.cjs"
+  },
+  "keywords": [
+    "lorem",
+    "ipsum",
+    "text",
+    "generator",
+    "dummy",
+    "placeholder"
+  ],
+  "author": "jack hundson",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}

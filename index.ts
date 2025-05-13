@@ -114,5 +114,5 @@ class LoremIpsum {
     }
 }
 
-const loremIpsum = new LoremIpsum();
+const loremIpsum: LoremIpsum = new LoremIpsum();
 export default loremIpsum; 

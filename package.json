@@ -1,41 +1,21 @@
 {
-  "name": "@jackhunds/loremipsum-generator",
+  "name": "lorem-ipsum-ts",
   "version": "1.0.0",
-  "description": "A simple Lorem Ipsum text generator",
-  "main": "index.js",
-  "type": "module",
-  "packageManager": "pnpm@8.15.4",
+  "description": "TypeScript Lorem Ipsum generator",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "NODE_OPTIONS=--experimental-vm-modules jest --config jest.config.cjs",
-    "prepublishOnly": "npm test",
-    "prepare": "npm test"
+    "build": "tsc",
+    "test": "ts-node test.ts",
+    "start": "ts-node index.ts"
   },
-  "files": [
-    "index.js",
-    "README.md"
-  ],
   "keywords": [
-    "lorem",
-    "ipsum",
-    "text",
-    "generator",
-    "dummy",
-    "placeholder"
+    "lorem-ipsum",
+    "typescript",
+    "text-generator"
   ],
-  "author": "jack hundson",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/bearboy/loremipsum.git"
-  },
-  "bugs": {
-    "url": "https://github.com/bearboy80/loremipsum/issues"
-  },
-  "homepage": "https://github.com/bearboy80/loremipsum#readme",
   "devDependencies": {
-    "jest": "^29.7.0"
-  },
-  "engines": {
-    "node": ">=14.0.0"
+    "typescript": "^5.0.0",
+    "ts-node": "^10.9.1"
   }
 }

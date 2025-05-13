@@ -1,4 +1,6 @@
 class LoremIpsum {
+    private words: string[];
+
     constructor() {
         this.words = [
             'lorem', 'ipsum', 'dolor', 'sit', 'amet', 'consectetur',
@@ -17,12 +19,12 @@ class LoremIpsum {
 
     /**
      * Generate Lorem Ipsum text with specified number of words
-     * @param {number} count - Number of words to generate
-     * @param {boolean} [capitalize=false] - Capitalize first letter of each word
-     * @returns {string} Generated Lorem Ipsum text
+     * @param count - Number of words to generate
+     * @param capitalize - Capitalize first letter of each word
+     * @returns Generated Lorem Ipsum text
      */
-    generateWords(count = 10, capitalize = false) {
-        const result = [];
+    generateWords(count: number = 10, capitalize: boolean = false): string {
+        const result: string[] = [];
         for (let i = 0; i < count; i++) {
             const randomIndex = Math.floor(Math.random() * this.words.length);
             let word = this.words[randomIndex];
@@ -36,16 +38,16 @@ class LoremIpsum {
 
     /**
      * Generate Lorem Ipsum text with specified number of bytes
-     * @param {number} bytes - Approximate number of bytes to generate
-     * @returns {string} Generated Lorem Ipsum text
+     * @param bytes - Approximate number of bytes to generate
+     * @returns Generated Lorem Ipsum text
      */
-    generateBytes(bytes = 100) {
+    generateBytes(bytes: number = 100): string {
         let result = '';
-        while (Buffer.byteLength(result) < bytes) {
+        while (new TextEncoder().encode(result).length < bytes) {
             result += this.generateWords(1) + ' ';
         }
         // Trim to get closer to target byte size
-        while (Buffer.byteLength(result) > bytes) {
+        while (new TextEncoder().encode(result).length > bytes) {
             result = result.slice(0, -1);
         }
         return result.trim();
@@ -53,11 +55,11 @@ class LoremIpsum {
 
     /**
      * Generate Lorem Ipsum text with specified number of sentences
-     * @param {number} count - Number of sentences to generate
-     * @returns {string} Generated Lorem Ipsum text
+     * @param count - Number of sentences to generate
+     * @returns Generated Lorem Ipsum text
      */
-    generateSentences(count = 3) {
-        const result = [];
+    generateSentences(count: number = 3): string {
+        const result: string[] = [];
         for (let i = 0; i < count; i++) {
             const wordsCount = Math.floor(Math.random() * 10) + 5; // 5-15 words per sentence
             const sentence = this.generateWords(wordsCount);
@@ -68,12 +70,12 @@ class LoremIpsum {
 
     /**
      * Generate Lorem Ipsum text with specified number of paragraphs
-     * @param {number} count - Number of paragraphs to generate
-     * @param {boolean} [withLineBreaks=true] - Use line breaks between paragraphs
-     * @returns {string} Generated Lorem Ipsum text
+     * @param count - Number of paragraphs to generate
+     * @param withLineBreaks - Use line breaks between paragraphs
+     * @returns Generated Lorem Ipsum text
      */
-    generateParagraphs(count = 1, withLineBreaks = true) {
-        const result = [];
+    generateParagraphs(count: number = 1, withLineBreaks: boolean = true): string {
+        const result: string[] = [];
         for (let i = 0; i < count; i++) {
             const sentenceCount = Math.floor(Math.random() * 3) + 3; // 3-6 sentences per paragraph
             result.push(this.generateSentences(sentenceCount));
@@ -83,12 +85,12 @@ class LoremIpsum {
 
     /**
      * Generate Lorem Ipsum text as a list
-     * @param {number} count - Number of list items
-     * @param {string} [style='bullet'] - List style ('bullet', 'number', or 'none')
-     * @returns {string} Generated Lorem Ipsum list
+     * @param count - Number of list items
+     * @param style - List style ('bullet', 'number', or 'none')
+     * @returns Generated Lorem Ipsum list
      */
-    generateList(count = 5, style = 'bullet') {
-        const items = [];
+    generateList(count: number = 5, style: 'bullet' | 'number' | 'none' = 'bullet'): string {
+        const items: string[] = [];
         for (let i = 0; i < count; i++) {
             const wordsCount = Math.floor(Math.random() * 5) + 3; // 3-8 words per item
             const text = this.generateWords(wordsCount);
@@ -113,4 +115,4 @@ class LoremIpsum {
 }
 
 const loremIpsum = new LoremIpsum();
-export default loremIpsum;
+export default loremIpsum; 
